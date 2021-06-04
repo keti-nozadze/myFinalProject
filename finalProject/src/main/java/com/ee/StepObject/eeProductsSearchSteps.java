@@ -27,7 +27,7 @@ public class eeProductsSearchSteps extends eeProductsSearch {
     @Step("პროდუქტების შედარება")
     public eeProductsSearchSteps compareList(){
         compare_product.click();
-        $(byText("ნივთი დამატებულია შედარების სიაში")).shouldBe(Condition.visible);
+        $(byText("ნივთი დამატებულია შედარების სიაში")).waitUntil(Condition.visible,3000);
         return this;
     }
     @Step("შედარების სიის გასუფთავება")
